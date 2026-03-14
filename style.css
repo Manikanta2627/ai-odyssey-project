@@ -50,7 +50,7 @@ width:100%;
 display:flex;
 justify-content:space-between;
 padding:15px 40px;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:100;
 }
@@ -74,7 +74,10 @@ justify-content:center;
 align-items:center;
 text-align:center;
 
-background-image:url("https://images.unsplash.com/photo-1677442136019-21780ecad995");
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),
+url("https://images.unsplash.com/photo-1677442136019-21780ecad995");
+
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -86,16 +89,24 @@ font-size:60px;
 
 .hero-subtitle{
 margin-top:10px;
-font-size:18px;
+font-size:20px;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 25px;
-background:#3b82f6;
+margin-top:25px;
+padding:14px 32px;
+background:linear-gradient(135deg,#3b82f6,#6366f1);
 color:white;
 border-radius:30px;
 text-decoration:none;
+font-weight:600;
+box-shadow:0 10px 25px rgba(59,130,246,0.4);
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(59,130,246,0.6);
 }
 
 .section{
@@ -119,7 +130,6 @@ padding:30px;
 width:260px;
 border-radius:12px;
 transition:0.4s;
-transform-style:preserve-3d;
 }
 
 .card:hover{
@@ -146,10 +156,6 @@ background:#020617;
 .reveal{
 opacity:0;
 transform:translateY(40px);
-}
-
-body,.card,.navbar,button{
-transition:0.5s;
 }
 
 @media(max-width:700px){
